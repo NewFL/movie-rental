@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: lightgray !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header.js */
+.header-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+/* Navigation.js */
+.navigation-banner{
+  display: flex;
+  justify-content: left;
+  background-color: #333;
   color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 0 50px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.navigation-banner th{
+  padding-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*AvailableMovies.js */
+
+.available-movies-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 50px;
+  padding: 10px 20px;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.btn-rent{
+  border-radius: 0px !important;
+}
+
+.movie-item{
+  background-color: grey !important;
+  
+}
+
+.table tbody tr {
+  margin-bottom: 20px !important;
+}
+
+.table tbody, td, tfoot, th, thead, tr{
+  border-style: none !important;
+}
+
+/*footer.js */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+.footer-container{
+  display: inline-block;
+  width: 100%;
+}
+
+.footer-container-left{
+  float:left
+}
+
+.footer-container-right{
+  float:right
+}
+
+.text-small{
+  font-size: 12px;
 }
