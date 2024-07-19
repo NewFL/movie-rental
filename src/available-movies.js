@@ -1,5 +1,6 @@
 import './App.css';
-import IconList from './IconList';
+import crossImage from './Images/Cross.png';
+import checkImage from './Images/Check.png';
 
 const moviesArray = [
   {
@@ -15,6 +16,13 @@ const moviesArray = [
     genre: "Action",
     price: 8,
     is_in_stock: true,
+  },
+  {
+    id: 3,
+    name: "Movie 3",
+    genre: "Comedy",
+    price: 12,
+    is_in_stock: false,
   },
 ];
 
@@ -38,13 +46,19 @@ const AvailableMovies = () => {
         </thead>
         <tbody>
             {moviesArray.map((movie) => (
-                <tr className='mb-2' key={movie.id}>
+                <tr className='table-light' key={movie.id}>
                     <td>{movie.name}</td>
-                    <td className='movie-item'>{movie.genre}</td>
+                    <td>{movie.genre}</td>
                     <td>{movie.price} $</td>
-                    <td>{movie.is_in_stock}</td>
                     <td>
-                        <button className="btn btn-dark btn-rent" onClick={''}>
+                      <img 
+                        src={movie.is_in_stock ? checkImage : crossImage} 
+                        alt={movie.is_in_stock ? 'In Stock' : 'Out of Stock'} 
+                        style={{ width: '20px', height: '20px' }} 
+                      />
+                </td>
+                    <td>
+                        <button className="btn btn-dark btn-rent " onClick={''}>
                 Rent
             </button></td>
                 </tr>
