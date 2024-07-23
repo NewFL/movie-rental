@@ -1,6 +1,6 @@
-import './App.css';
-import crossImage from './Images/Cross.png';
-import checkImage from './Images/Check.png';
+import '../App.css';
+import crossImage from '../Images/Cross.png';
+import checkImage from '../Images/Check.png';
 
 const moviesArray = [
   {
